@@ -9,7 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NavbarUserComponent } from './navbar-user/navbar-user.component';
-import { ViewProductComponent } from './view-product/view-product.component'
+import { ViewProductComponent } from './view-product/view-product.component';
+import { SearchProductComponent } from './search-product/search-product.component'
 
 const myRoute:Routes=[
   {
@@ -19,6 +20,10 @@ const myRoute:Routes=[
   {
     path:"view",
     component:ViewProductComponent
+  },
+  {
+    path:"search",
+    component:SearchProductComponent
   }
 ]
 
@@ -28,7 +33,8 @@ const myRoute:Routes=[
     AddProductComponent,
     NavbarComponent,
     NavbarUserComponent,
-    ViewProductComponent
+    ViewProductComponent,
+    SearchProductComponent
   ],
   imports: [
     BrowserModule,
