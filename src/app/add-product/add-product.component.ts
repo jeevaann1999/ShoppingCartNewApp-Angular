@@ -29,17 +29,6 @@ export class AddProductComponent {
       (response:any)=>
       {
         console.log(response)
-        if (response.status=="success") {
-          alert("product added successfully")
-          this.category=""
-          this.description=""
-          this.image=""
-          this.name=""
-          this.price=""
-        } else {
-          alert("something went wrong")
-          
-        }
       }
     )
 
