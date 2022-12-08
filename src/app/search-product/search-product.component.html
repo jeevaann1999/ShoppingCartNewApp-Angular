@@ -1,38 +1,36 @@
 <app-navbar></app-navbar>
 <div class="container">
-    <div class="row m-4">
+    <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <div class="row g-3 m-4">
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <h1>Search Product</h1>
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <h2>Search Product</h2>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label for="" class="form-label">Product Name</label>
-                    <input type="text" name="name" [(ngModel)]="name" class="form-control">
+                    <label for="" class="form-label">Name</label>
+                    <input name="name" [(ngModel)]="name" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button (click)="readValue()" class="btn btn-success">Search</button>
+                    <button (click)="readValue()" class="btn btn-primary">Search</button>
                 </div>
             </div>
-            <div class="row m-4">
+            <div class="row g-3 mt-4">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <table class="table">
+                    <table class="table" >
                         <thead>
                             <tr>
-                                <th scope="col">Product Name</th>
-                                <th scope="col">Category</th>
+                                <th scope="col">Name</th>
                                 <th scope="col">Description</th>
+                                <th scope="col">Category</th>
                                 <th scope="col">Price</th>
-                                <th scope="col">Image</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let i of searchData">
-                                <td>{{i.name}}</td>
-                                <td>{{i.category}}</td>
+                                <th>{{i.name}}</th>
                                 <td>{{i.description}}</td>
+                                <td>{{i.category}}</td>
                                 <td>{{i.price}}</td>
-                                <td>{{i.image}}</td>
                             </tr>
                         </tbody>
                     </table>

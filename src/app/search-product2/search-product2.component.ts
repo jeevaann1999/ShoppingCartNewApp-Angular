@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-search-product',
-  templateUrl: './search-product.component.html',
-  styleUrls: ['./search-product.component.css']
+  selector: 'app-search-product2',
+  templateUrl: './search-product2.component.html',
+  styleUrls: ['./search-product2.component.css']
 })
-export class SearchProductComponent {
+export class SearchProduct2Component {
   name = ""
   searchData: any = []
   constructor(private api: ApiService) { }

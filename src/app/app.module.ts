@@ -10,9 +10,26 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NavbarUserComponent } from './navbar-user/navbar-user.component';
 import { ViewProductComponent } from './view-product/view-product.component';
-import { SearchProductComponent } from './search-product/search-product.component'
+import { SearchProductComponent } from './search-product/search-product.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { UserRegisterComponent } from './user-register/user-register.component';
+import { ViewProductCardComponent } from './view-product-card/view-product-card.component';
+import { SearchProduct2Component } from './search-product2/search-product2.component'
 
 const myRoute:Routes=[
+  {
+    path:"",
+    component:AdminLoginComponent
+  },
+  {
+    path:"userlogin",
+    component:UserLoginComponent
+  },
+  {
+    path:"register",
+    component:UserRegisterComponent
+  },
   {
     path:"add",
     component:AddProductComponent
@@ -24,6 +41,14 @@ const myRoute:Routes=[
   {
     path:"search",
     component:SearchProductComponent
+  },
+  {
+    path:"search2",
+    component:SearchProduct2Component
+  },
+  {
+    path:"viewcard",
+    component:SearchProductComponent
   }
 ]
 
@@ -34,7 +59,12 @@ const myRoute:Routes=[
     NavbarComponent,
     NavbarUserComponent,
     ViewProductComponent,
-    SearchProductComponent
+    SearchProductComponent,
+    AdminLoginComponent,
+    UserLoginComponent,
+    UserRegisterComponent,
+    ViewProductCardComponent,
+    SearchProduct2Component
   ],
   imports: [
     BrowserModule,
