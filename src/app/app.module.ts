@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarUserComponent } from './navbar-user/navbar-user.component'
 
 const myRoute:Routes=[
   {
@@ -18,7 +20,9 @@ const myRoute:Routes=[
 @NgModule({
   declarations: [
     AppComponent,
-    AddProductComponent
+    AddProductComponent,
+    NavbarComponent,
+    NavbarUserComponent
   ],
   imports: [
     BrowserModule,
