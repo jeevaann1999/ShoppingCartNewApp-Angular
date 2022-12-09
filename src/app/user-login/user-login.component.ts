@@ -11,7 +11,7 @@ export class UserLoginComponent {
   email = ""
   password = ""
 
-  constructor(private router: Router) { }
+  constructor(private api:ApiService,private router: Router) { }
 
   readValue = () => {
     let data: any = {
@@ -19,12 +19,18 @@ export class UserLoginComponent {
       "password": this.password
     }
     console.log(data)
-
-    if (this.email == "user" && this.password == "12345") {
-      this.router.navigate(['/search2'])
-    } else {
-      alert("invalid login")
-    }
+    this.api.userLogin(data).subscribe(
+      (response:any)=>{
+        this.email=""
+        this.password=""
+        if (response.status=="success") {
+          let email=response.userId
+          
+        } else {
+          
+        }
+      }
+    )
 
   }
 }
