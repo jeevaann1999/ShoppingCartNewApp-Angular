@@ -27,7 +27,7 @@ export class UserLoginComponent {
           let userId=response.userId
           console.log(userId)
           localStorage.setItem("userInfo",userId)
-          this.router.navigate(["/viewcard"])
+          this.router.navigate(["/viewprofile"])
         } else {
           alert(response.message)
         }
