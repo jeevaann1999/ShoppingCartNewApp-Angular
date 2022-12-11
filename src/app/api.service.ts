@@ -28,5 +28,9 @@ export class ApiService {
   {
     return this.http.post("http://localhost:8080/userlogin",dataToSend)
   }
+  getprofileDetails=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/getUserById",dataToSend)
+  }
   
 }

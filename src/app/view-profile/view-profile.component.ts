@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-profile.component.css']
 })
 export class ViewProfileComponent {
-  userId: any = ""
+  userId:any = ""
   constructor() {
-    this.userId = localStorage.getItem("userId")
+    this.userId = localStorage.getItem("userInfo")
   }
 }
