@@ -15,7 +15,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { ViewProductCardComponent } from './view-product-card/view-product-card.component';
-import { SearchProduct2Component } from './search-product2/search-product2.component'
+import { SearchProduct2Component } from './search-product2/search-product2.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component'
 
 const myRoute:Routes=[
   {
@@ -49,6 +50,10 @@ const myRoute:Routes=[
   {
     path:"viewcard",
     component:SearchProductComponent
+  },
+  {
+    path:"viewprofile",
+    component:ViewProfileComponent
   }
 ]
 
@@ -64,7 +69,8 @@ const myRoute:Routes=[
     UserLoginComponent,
     UserRegisterComponent,
     ViewProductCardComponent,
-    SearchProduct2Component
+    SearchProduct2Component,
+    ViewProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -24,10 +24,12 @@ export class UserLoginComponent {
         this.email=""
         this.password=""
         if (response.status=="success") {
-          let email=response.userId
-          
+          let userId=response.userId
+          console.log(userId)
+          localStorage.setItem("userInfo",userId)
+          this.router.navigate(["/viewcard"])
         } else {
-          
+          alert(response.message)
         }
       }
     )
